@@ -1,8 +1,8 @@
 name: university_locations
-description: A new Flutter plugin project.
-version: 0.0.1
+description: A Flutter project that contains a list of 900 universities in the united states and their coordinates
+version: 0.0.2
 homepage: https://hobbimates.com
-
+repository: https://github.com/Adimarogonas/university_locations
 environment:
   sdk: ">=2.17.1 <3.0.0"
   flutter: ">=2.5.0"

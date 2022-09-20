@@ -52,7 +52,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: Text('Closest University to 33.6, -117.7 ${UniversityLocations().findNearestUniversity(33.6405, -117.8443)}'),
         ),
         body: Center(
           child: Text('Running on: $_platformVersion\n'),
