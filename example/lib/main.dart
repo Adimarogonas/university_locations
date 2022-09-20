@@ -31,8 +31,8 @@ class _MyAppState extends State<MyApp> {
     // Platform messages may fail, so we use a try/catch PlatformException.
     // We also handle the message potentially returning null.
     try {
-      platformVersion =
-          await _universityLocationsPlugin.getPlatformVersion() ?? 'Unknown platform version';
+      platformVersion = await _universityLocationsPlugin.getPlatformVersion() ??
+          'Unknown platform version';
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }
@@ -52,7 +52,8 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Closest University to 33.6, -117.7 ${UniversityLocations().findNearestUniversity(33.6405, -117.8443)}'),
+          title: Text(
+              'Closest University to 33.6, -117.7 ${UniversityLocations().findNearestUniversity(33.6405, -117.8443)}'),
         ),
         body: Center(
           child: Text('Running on: $_platformVersion\n'),

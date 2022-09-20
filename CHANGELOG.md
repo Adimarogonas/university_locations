@@ -1,4 +1,4 @@
-## 0.0.1
+## 0.0.3
 
-
-Provides initial list of universities and basic functions
+-Fixed Formatting
+-Added more detailed Dataset

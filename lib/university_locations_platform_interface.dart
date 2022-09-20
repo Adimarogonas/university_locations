@@ -8,13 +8,14 @@ abstract class UniversityLocationsPlatform extends PlatformInterface {
 
   static final Object _token = Object();
 
-  static UniversityLocationsPlatform _instance = MethodChannelUniversityLocations();
+  static UniversityLocationsPlatform _instance =
+      MethodChannelUniversityLocations();
 
   /// The default instance of [UniversityLocationsPlatform] to use.
   ///
   /// Defaults to [MethodChannelUniversityLocations].
   static UniversityLocationsPlatform get instance => _instance;
-  
+
   /// Platform-specific implementations should set this with their own
   /// platform-specific class that extends [UniversityLocationsPlatform] when
   /// they register themselves.
