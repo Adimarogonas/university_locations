@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:university_locations/uniList.dart';
 import 'package:university_locations/university_locations.dart';
 import 'package:university_locations/university_locations_platform_interface.dart';
 import 'package:university_locations/university_locations_method_channel.dart';
@@ -39,10 +40,24 @@ void main() {
         UniversityLocations().calculateDistance(
             33.6431901,
             -117.84016493553044,
-            double.parse(UniversityLocations()
-                .universities['University of California, Irvine']['lat']),
-            double.parse(UniversityLocations()
-                .universities['University of California, Irvine']['lon'])),
+            double.parse(
+                universities['University of California, Irvine']['lat']),
+            double.parse(
+                universities['University of California, Irvine']['lon'])),
         0);
+  });
+
+  test('isUniEmail', () {
+    expect(UniversityLocations().isUniEmail('astudent@asu.edu'), true);
+    expect(UniversityLocations().isUniEmail('notastudent@notauniversity.com'),
+        false);
+  });
+
+  test('getUniversityFromEmail', () {
+    expect(UniversityLocations().getUniFromEmail('astudent@asu.edu'),
+        'Arizona State University');
+    expect(
+        UniversityLocations().getUniFromEmail('notastudent@notauniversity.com'),
+        '');
   });
 }
